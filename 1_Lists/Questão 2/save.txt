@@ -1,0 +1,39 @@
+QX_List* QX_List::merge_lists(QX_List *list2){
+	QX_List lst = new QX_List();
+	Node *aux1 = head->next;
+	Node *aux2 = list2->head->next;
+	cont = 0;
+	if(isEmpty() && !list2->isEmpty()){
+		head->next = list2->head->next;
+		list2->head->next = list2->head;
+		head->back = list2->head->back;
+		list2->head->back = list2-> head;
+	}	
+	else if(!isEmpty() && !list2->isEmpty()){
+		if(size()> list2->size()){
+			while(aux1 != head){
+				if(cont %2!=0){
+					insertAfter(aux2->value,cont-1);
+					aux2 = aux2->next;
+				}
+				cont++;
+				aux1=aux1->next;
+
+			}
+		}else{
+			while(aux){
+				if(cont%2!=0 && cont<size()){
+					insertAfter(aux2->value,cont-1);
+					aux2 = aux2->next;
+				}else if(cont%2!=0){
+					push_back(aux2->value);
+					aux2= aux2->next;
+
+				}
+				cont++;
+				aux1=aux1->next;
+			}
+		}
+	}std::cont<<"<merge_lists!>\n";
+}
+
