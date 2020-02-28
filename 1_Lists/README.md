@@ -6,7 +6,7 @@ Implementação C++:
 
 
 ## Lista Sequêncial Redimensionavel
-'''cpp
+```c++
 //---construtor
 	QX_SeqList(int n);
 	//---Destrutor
@@ -34,12 +34,12 @@ Implementação C++:
 	void removeAll(int x);
 	//remove o elemento do final da lista e retorna ele
 	int pop_back();
-'''
+```
 
 
 ## Lista Circular Duplamente Encadeada
 
-'''cpp
+```c++
 	//construtor;
 	QX_List();
 	//Destrutor;
@@ -83,6 +83,6 @@ Implementação C++:
 //a lista passada;	
 	void merge_lists(QX_List *list2);
 
-'''
+```
 
 
